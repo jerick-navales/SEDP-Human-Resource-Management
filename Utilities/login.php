@@ -43,17 +43,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         switch ($userType) {
             case "scholar":
                 $_SESSION['login_success'] = "Welcome $username!";
-                $_SESSION['redirect_to'] = "./Scholar Page/App/View/scholar_home.php";
+                $_SESSION['redirect_to'] = "./Views/Scholar/scholar_home.php";
                 break;
 
             case "employee":
                 $_SESSION['login_success'] = "Welcome $username!";
-                $_SESSION['redirect_to'] = "./Employee Page/App/View/employee_home.php";
+                $_SESSION['redirect_to'] = "./Views/Employee/employee_home.php";
                 break;
 
             case "admin":
                 $_SESSION['login_success'] = "Welcome $username!";
-                $_SESSION['redirect_to'] = "./Admin Page/App/View/admin_home.php";
+                $_SESSION['redirect_to'] = "./Views/Admin/AdminDashboard.php";
                 break;
         }
         header("Location: ./index.php");
